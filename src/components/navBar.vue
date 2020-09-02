@@ -121,12 +121,17 @@ export default {
       this.lanIsActive = "EN";
       this.$store.dispatch("setLanguage", "en");
     }
+    let that = this
     window.onscroll = function () {
-      console.log(document.documentElement.scrollTop)
       if(document.documentElement.scrollTop > 100){
         document.getElementById("calay-navbar").style.background = "#fb203b";
       } else {
         document.getElementById("calay-navbar").style.background = "none";
+      }
+      let display  = document.getElementById("navbarCollapse").style.display;
+      if( document.documentElement.clientWidth < 768 && display=="block" ) {
+        that.isclick = true;
+        that.clickBtn()
       }
     }
   }
