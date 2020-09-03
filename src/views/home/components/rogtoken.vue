@@ -2,9 +2,9 @@
  * @Author: codercao
  * @Date: 2020-09-01 21:53:49
  * @LastEditors: codercao
- * @LastEditTime: 2020-09-03 22:18:27
+ * @LastEditTime: 2020-09-03 22:46:20
  * @Description: 
- * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\sectionTwo.vue
+ * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\rogtoken.vue
 -->
 <template>
   <section class="sectionTwo-warrper">

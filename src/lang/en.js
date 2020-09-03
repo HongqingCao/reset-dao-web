@@ -1,14 +1,14 @@
 export default {
   navBar: {
     list: [
-      { id: "gov", title: "GOV", ref: "" },
+      { id: "home", title: "HOME", ref: "" },
       { id: "projects", title: "PROJECTS", ref: "" },
       { id: "community", title: "COMMUNITY", ref: "" },
       { id: "Web3", title: "(Connect Web3)", ref: "" }
     ]
   },
   sectionOne: {
-    title: "Reset.theDAO",
+    title: "resetDAO",
     textp1: "DAOs' matrix/Aggregator",
     textp2: "All due to swarm intelligence",
     btn1: "cast a vote",
@@ -17,34 +17,39 @@ export default {
   sectionTwo: {
     title: "Mission & Values",
     textp1:
-      "Reset.theDAO is a decentralized autonomous organization born in the community, as a booster for DAO entrepreneurship.",
+      "resetDAO is a decentralized autonomous organization born in the community, we optimize the governance of DAOs and DeFi, we develop, assist and incubate DAO products and protocols",
     textp2:
-      "We reject the control of the center and unfair distribution，We call for the encrypted world to be people-oriented again，We support the decentralization of power and benefits. Reset.theDAO  members will form an organization in the form of partners, and distribute value fairly through mutual voting, mutual recognition, and gifts.",
+      "This is a cooperative in the cryptoworld. We reject the control of the center and unfair distribution，We call for the encrypted world to be people-oriented again，We support the decentralization of power and benefits. resetDAO  members will form an organization in the form of partners, and distribute value fairly through mutual voting.",
     textp3:
-      "This is a cooperative in the cryptoworld. We will help build projects or organizations that benefit society, hold governance tokens in the form of a cooperative, and regain the original dream of The DAO.",
-    textp4:
       "People-oriented governance capabilities allow DAO to flexibly change, programmable currency, community capital, headless brands, mutual credit bonds, everything is possible."
   },
   sectionThree: {
-    title: "Reset.theDAO Projects",
+    title: "resetDAO Projects",
+    text:"We plan to fund and help early Dao organizations or businesses",
     btn1: "Play now",
     btn2: "Learn more",
     list: [
       {
         id: "0",
-        title: "NASH Protocol",
+        title: "gov bento",
         img: "@/assets/nash_jpg.jpg",
-        text: "Running complex games with hidden strategy on blockchain"
+        text: "Support governance token mining of DEX and DeFi, aggregate voting power in the liquid pool, and market it to obtain more revenue"
       },
       {
         id: "2",
-        title: "Seed bank",
+        title: "gov bento V2.0",
         img: "",
         text:
-          "DAOs token distribution and financing platform，access easily and deploy quickly"
+          "Introduce the MakaerDAO to help DAO and DeFi derive credit, and aggregate more governance tokens to help expand governance"
       },
       {
         id: "3",
+        title: "DAS",
+        img: "",
+        text: "Achieve governance incentives through flexible supply of governance tokens similar to AMPL. DAS will be a complete set of governance structure."
+      },
+      {
+        id: "4",
         title: "NASH Protocol",
         img: "",
         text: "Running complex games with hidden strategy on blockchain"

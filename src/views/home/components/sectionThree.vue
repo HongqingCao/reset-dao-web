@@ -1,3 +1,11 @@
+<!--
+ * @Author: codercao
+ * @Date: 2020-09-01 21:53:49
+ * @LastEditors: codercao
+ * @LastEditTime: 2020-09-03 22:42:13
+ * @Description: 
+ * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\sectionThree.vue
+-->
 <template>
   <section class="sectionThree-warrper bg-light" id="pricing">
     <div class="container">
@@ -6,10 +14,11 @@
           <h2 class="text-primary text-title">
             {{ $t("sectionThree.title") }}
           </h2>
+          <p class="text-muted lead">{{$t("sectionThree.text")}} </p>
         </div>
       </div>
       <div class="row d-md-flex mt-4 text-center">
-        <div class="col-md-4 mt-2" v-for="item in list" :key="item.id">
+        <div class="col-md-3 mt-2" v-for="item in list" :key="item.id">
           <div class="card card-warrper">
             <div class="card-body">
               <h2 class="card-title">{{ item.title }}</h2>
@@ -52,11 +61,12 @@ export default {
     font-size: 2rem;
     font-weight: bold;
     color: #fb203b !important;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   .text-muted {
-    text-align: left;
-    padding-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
   }
   .card-warrper {
     background: none !important;
