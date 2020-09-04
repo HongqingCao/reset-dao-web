@@ -57,7 +57,6 @@ export default {
     img {
       display: block;
       width: 100%;
-      background-color: #959595;
     }
   }
 }

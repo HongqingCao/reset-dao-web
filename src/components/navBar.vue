@@ -126,9 +126,9 @@ export default {
     let that = this
     window.onscroll = function () {
       if(document.documentElement.scrollTop > 100){
-        document.getElementById("calay-navbar").style.background = "#fb203b";
+        document.getElementById("calay-navbar").style.background = "rgb(521, 32, 59, 1)";
       } else {
-        document.getElementById("calay-navbar").style.background = "none";
+        document.getElementById("calay-navbar").style.background = "rgb(521, 32, 59, 0.5)";
       }
       let display  = document.getElementById("navbarCollapse").style.display;
       if( document.documentElement.clientWidth < 768 && display=="block" ) {
