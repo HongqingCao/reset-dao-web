@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionFive-warrper bg-light">
+  <section class="sectionFive-warrper">
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">

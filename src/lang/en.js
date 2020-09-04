@@ -116,6 +116,10 @@ export default {
   sectionSix: {
     title: "Partners"
   },
+  rogtoken: {
+    title: "ROG token powers the Community Governance",
+    text:"ROG is the ResetDAO native ERC20 token，ROG token holders have an economic claim to the ResetDAO´s revenue，it represents your contribution and rights in the organization, we will mine new ROG as an incentive for contributors.",
+  },
   fooTer: {
     title: "Join the community",
     text:

@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionSix-warrper">
+  <section class="sectionSix-warrper  bg-light">
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto text-center">
@@ -7,8 +7,8 @@
         </div>
       </div>
       <div class="row d-md-flex mt-4 text-center">
-        <div class="col-md-3 mt-2 list" v-for="item in 8" :key="item">
-          <img />
+        <div class="col-md-3 mt-2 list" v-for="item in list" :key="item.id">
+          <img :src="item.img" class="list-img"/>
         </div>
       </div>
     </div>
@@ -16,7 +16,28 @@
 </template>
 <script>
 export default {
-  name: "sectionSix"
+  name: "sectionSix",
+  data(){
+    return {
+      list:[]
+    }
+  },
+  methods: {
+    getList() {
+      const imgs = require.context('@/assets/partners', true, /\.png$/)
+      imgs.keys().forEach((key,index) => {
+        let item = {
+          id:index,
+          img: require('@/assets/partners'+ key.substr(1))
+        }
+        this.list.push(item)
+        })
+        console.log(this.list)
+    }
+  },
+  created() {
+    this.getList()
+  }
 };
 </script>
 <style lang="scss">
@@ -35,7 +56,6 @@ export default {
   .list {
     img {
       display: block;
-      height: 5rem;
       width: 100%;
       background-color: #959595;
     }

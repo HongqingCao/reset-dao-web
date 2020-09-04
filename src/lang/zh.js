@@ -8,42 +8,47 @@ export default {
     ]
   },
   sectionOne: {
-    title: "Reset.theDAO",
+    title: "ResetDAO",
     textp1: "DAOs 母体/聚合器",
-    textp2: "一切归于群体智能",
+    textp2: "专注于优化群体治理，推动defi与DAO，一切归于群体智能",
     btn1: "投票",
     btn2: "加入我们"
   },
   sectionTwo: {
-    title: "Reset.theDAO 宣言",
+    title: "ResetDAO 宣言",
     textp1:
-      "投资、催化、分享、传播。Reset.theDAO 是一个社区诞生的去中心化自治组织，作为 dao 创业的助推火箭。",
+      "resetDAO 是一个社区诞生的去中心化自治组织，将为 DAOs 与 DeFi 的治理提供优化，并持续开发、协助、孵化 DAO 的产品与协议。",
     textp2:
-      "我们拒绝中心的控制与不公平的分配，我们呼唤加密世界重新以人为本，我们拥护下放权力与收益。Reset.theDAO 的成员将以合伙人的形式结成组织，并通过互相投票、互相认可、增发馈赠的方式，公平地分配价值。",
+      "这是一个加密世界的合作社，我们拒绝中心的控制与不公平的分配，我们呼唤加密世界重新以人为本，我们拥护下放权力与收益。resetDAO 的成员将以合伙人的形式结成组织，并通过互相投票公平地分配组织产生的价值。",
     textp3:
-      "这是一个加密世界的合作社，我们将通过公开治理帮助建立有意义的商业与组织，以合作社形式持有治理代币，重拾 The DAO 最初的梦想。",
-    textp4:
       "以人为本的治理能力让 DAO 能灵活的变迁，可编程货币、社区资本、无头品牌、互信债券，一切皆有可能。"
   },
   sectionThree: {
-    title: "Reset.theDAO 项目",
+    title: "ResetDAO 项目",
+    text: "我们计划为早期 DAO 组织或商业提供帮助",
     btn1: "使用",
     btn2: "学习更多",
     list: [
       {
         id: "0",
-        title: "NASH Protocol",
+        title: "治理盒饭",
         img: "@/assets/nash_jpg.jpg",
-        text: "在区块链上运行隐藏策略下运行复杂的博弈游戏"
+        text: "聚合DEX DeFi 的治理代币挖矿，带流动池中聚合投票能力，并将其市场化获取更多收益"
       },
       {
         id: "2",
-        title: "Seed bank 种子银行",
+        title: "治理盒饭V2.0",
         img: "",
-        text: "DAO 代币的分发/融资平台，更简单的准入，更快速的启动"
+        text: "引入MakaerDAO机制帮助 DAO 与 DeFi 衍生信用，并聚合更多的治理代币，帮助其扩展治理"
       },
       {
         id: "3",
+        title: "DAS",
+        img: "",
+        text: "帮助DAO 与 DeFi 更好的实现治理，通过类似AMPL式弹性供应治理代币，实现治理激励"
+      },
+      {
+        id: "4",
         title: "NASH Protocol",
         img: "",
         text: "在区块链上运行隐藏策略下运行复杂的博弈游戏"
@@ -105,6 +110,10 @@ export default {
   },
   sectionSix: {
     title: "合作伙伴"
+  },
+  rogtoken: {
+    title: "ROG 代币驱动社区治理",
+    text:"ROG 是 ResetDAO 的原生ERC20代币，ROG 持有者具备 ResetDAO 中资产与收益的控制权。ROG 代表您在组织中的贡献和权利，我们将挖掘新的ROG作为对贡献者的激励。",
   },
   fooTer: {
     title: "联系我们",

@@ -25,7 +25,8 @@
             <a
               @click="changNav(item.id)"
               class="nav-link page-scroll"
-              :class="{ active: isActive == item.id }"
+              :class="{ active: item.id == isActive }"
+              :href="`#`+ item.id "
               >{{ item.title }}</a
             >
           </li>
@@ -54,7 +55,7 @@ export default {
   name: "navbar",
   data() {
     return {
-      isActive: "gov",
+      isActive: "home",
       isclick:false,
       lanIsActive: "EN"
     };
@@ -73,7 +74,8 @@ export default {
   },
   watch: {
     getlang(val) {
-      if (val === "zh") {
+      console.log(val)
+      if (val == "zh") {
         this.lanIsActive = "CN";
       } else {
         this.lanIsActive = "EN";
@@ -114,7 +116,7 @@ export default {
   },
   created() {
     const chooseLanguage = Cookies.get("language");
-    if (chooseLanguage === "zh") {
+    if (chooseLanguage == "zh") {
       this.lanIsActive = "CN";
       this.$store.dispatch("setLanguage", "zh");
     } else {
@@ -142,6 +144,7 @@ export default {
   .navbar {
     height: 100px;
     transition: all 1s ease;
+    background: rgb(521, 32, 59, 0.4);
     @media screen and (max-width: 768px) {
         .collapse {
           background-color: rgb(521, 32, 59);

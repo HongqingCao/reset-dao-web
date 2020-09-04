@@ -7,7 +7,7 @@
  * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\index.vue
 -->
 <template>
-  <div>
+  <div class="home-wrapper">
     <navBar></navBar>
     <sectionOne></sectionOne>
     <sectionTwo></sectionTwo>

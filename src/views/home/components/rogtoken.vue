@@ -7,14 +7,12 @@
  * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\rogtoken.vue
 -->
 <template>
-  <section class="sectionTwo-warrper">
+  <section class="rogtoken-warrper" id="community">
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">
-          <h2 class="text-primary text-title">{{ $t("sectionTwo.title") }}</h2>
-          <p class="text-muted lead">{{ $t("sectionTwo.textp1") }}</p>
-          <p class="text-muted lead">{{ $t("sectionTwo.textp2") }}</p>
-          <p class="text-muted lead">{{ $t("sectionTwo.textp3") }}</p>
+          <h2 class="text-primary text-title">{{ $t("rogtoken.title") }}</h2>
+          <p class="text-muted lead">{{ $t("rogtoken.text") }}</p>
         </div>
       </div>
     </div>
@@ -23,12 +21,12 @@
 
 <script>
 export default {
-  name: "sectionTwo"
+  name: "rogtoken"
 };
 </script>
 
 <style lang="scss">
-.sectionTwo-warrper {
+.rogtoken-warrper {
   padding: 5rem 0 5rem 0;
   .text-title {
     font-size: 2rem;

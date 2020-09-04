@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionOne-warrper">
+  <section class="sectionOne-warrper" id="home">
     <div class="container">
       <div class="row vh-md-100">
         <div class="col-md-8 mx-auto my-auto text-white text-center">

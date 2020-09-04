@@ -7,7 +7,7 @@
  * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\sectionThree.vue
 -->
 <template>
-  <section class="sectionThree-warrper bg-light" id="pricing">
+  <section class="sectionThree-warrper bg-light" id="projects">
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto text-center">
