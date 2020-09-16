@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionFive-warrper">
+  <section class="sectionFive-warrper bg-light">
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">
@@ -34,6 +34,9 @@ export default {
     font-weight: bold;
     color: #fb203b !important;
     padding-bottom: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
   }
   .text-muted {
     padding-bottom: 1rem;

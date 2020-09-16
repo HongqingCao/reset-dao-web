@@ -25,8 +25,9 @@
             <a
               @click="changNav(item.id)"
               class="nav-link page-scroll"
+              target="_blank"
               :class="{ active: item.id == isActive }"
-              :href="`#`+ item.id "
+              :href="item.ref"
               >{{ item.title }}</a
             >
           </li>
@@ -56,7 +57,7 @@ export default {
   data() {
     return {
       isActive: "home",
-      isclick:false,
+      isclick: false,
       lanIsActive: "EN"
     };
   },
@@ -74,7 +75,7 @@ export default {
   },
   watch: {
     getlang(val) {
-      console.log(val)
+      console.log(val);
       if (val == "zh") {
         this.lanIsActive = "CN";
       } else {
@@ -84,19 +85,18 @@ export default {
   },
   methods: {
     clickBtn() {
-      if(this.isclick){
+      if (this.isclick) {
         this.isclick = false;
-        document.getElementById("navbarCollapse").style.display="none";
+        document.getElementById("navbarCollapse").style.display = "none";
       } else {
         this.isclick = true;
-        document.getElementById("navbarCollapse").style.display="block";
+        document.getElementById("navbarCollapse").style.display = "block";
       }
-      
     },
-    changNav(id){
-       this.isActive = id;
-       this.isclick = true;
-       this.clickBtn()
+    changNav(id) {
+      this.isActive = id;
+      this.isclick = true;
+      this.clickBtn();
     },
     changLen(val) {
       if (val === 1) {
@@ -108,9 +108,9 @@ export default {
         this.$i18n.locale = "en";
         this.$store.dispatch("setLanguage", "en");
       }
-      if(document.documentElement.clientWidth < 768) {
+      if (document.documentElement.clientWidth < 768) {
         this.isclick = true;
-        this.clickBtn()
+        this.clickBtn();
       }
     }
   },
@@ -123,19 +123,21 @@ export default {
       this.lanIsActive = "EN";
       this.$store.dispatch("setLanguage", "en");
     }
-    let that = this
-    window.onscroll = function () {
-      if(document.documentElement.scrollTop > 100){
-        document.getElementById("calay-navbar").style.background = "rgb(521, 32, 59, 1)";
+    let that = this;
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 100) {
+        document.getElementById("calay-navbar").style.background =
+          "rgb(521, 32, 59, 1)";
       } else {
-        document.getElementById("calay-navbar").style.background = "rgb(521, 32, 59, 0.5)";
+        document.getElementById("calay-navbar").style.background =
+          "rgb(521, 32, 59, 0.8)";
       }
-      let display  = document.getElementById("navbarCollapse").style.display;
-      if( document.documentElement.clientWidth < 768 && display=="block" ) {
+      let display = document.getElementById("navbarCollapse").style.display;
+      if (document.documentElement.clientWidth < 768 && display == "block") {
         that.isclick = true;
-        that.clickBtn()
+        that.clickBtn();
       }
-    }
+    };
   }
 };
 </script>
@@ -146,12 +148,12 @@ export default {
     transition: all 1s ease;
     background: rgb(521, 32, 59, 0.4);
     @media screen and (max-width: 768px) {
-        .collapse {
-          background-color: rgb(521, 32, 59);
-        }
-        .lan-item{
-          padding-left: 0px;
-        }
+      .collapse {
+        background-color: rgb(521, 32, 59, 0.8);
+      }
+      .lan-item {
+        padding-left: 0px;
+      }
     }
     .navbar-nav {
       li {
@@ -174,7 +176,6 @@ export default {
           @media screen and (max-width: 768px) {
             padding-left: 0px;
             margin: auto;
-
           }
           .lan {
             color: white;

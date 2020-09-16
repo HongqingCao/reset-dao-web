@@ -2,13 +2,18 @@ export default {
   navBar: {
     list: [
       { id: "home", title: "HOME", ref: "" },
-      { id: "projects", title: "PROJECTS", ref: "" },
-      { id: "community", title: "COMMUNITY", ref: "" },
-      { id: "Web3", title: "(Connect Web3)", ref: "" }
+      { id: "DAO", title: "DAO", ref: "https://xdai.aragonchina.xyz/#/reset/" },
+      { id: "document", title: "DOCUMENT", ref: "http://docs.resetdao.com" },
+      {
+        id: "community",
+        title: "Join Our Community",
+        ref: "https://t.me/ResetDAO  "
+      }
+      // { id: "Web3", title: "(Connect Web3)", ref: "" }
     ]
   },
   sectionOne: {
-    title: "resetDAO",
+    title: "ResetDAO",
     textp1: "DAOs' matrix/Aggregator",
     textp2: "All due to swarm intelligence",
     btn1: "cast a vote",
@@ -17,41 +22,43 @@ export default {
   sectionTwo: {
     title: "Mission & Values",
     textp1:
-      "resetDAO is a decentralized autonomous organization born in the community, we optimize the governance of DAOs and DeFi, we develop, assist and incubate DAO products and protocols",
+      "ResetDAO is a decentralized autonomous organization born in the community, we optimize the governance of DAOs and DeFi, we develop, assist and incubate DAO products and protocols",
     textp2:
       "This is a cooperative in the cryptoworld. We reject the control of the center and unfair distribution，We call for the encrypted world to be people-oriented again，We support the decentralization of power and benefits. resetDAO  members will form an organization in the form of partners, and distribute value fairly through mutual voting.",
     textp3:
       "People-oriented governance capabilities allow DAO to flexibly change, programmable currency, community capital, headless brands, mutual credit bonds, everything is possible."
   },
   sectionThree: {
-    title: "resetDAO Projects",
-    text:"We plan to fund and help early Dao organizations or businesses",
+    title: "Project",
+    text: "We plan to fund and help early Dao organizations or businesses",
     btn1: "Play now",
     btn2: "Learn more",
     list: [
       {
         id: "0",
         title: "gov bento",
-        img: "@/assets/nash_jpg.jpg",
-        text: "Support governance token mining of DEX and DeFi, aggregate voting power in the liquid pool, and market it to obtain more revenue"
+        img: require("../assets/projects/gov-bento.png"),
+        text:
+          "Support governance token mining of DEX and DeFi, aggregate voting power in the liquid pool, and market it to obtain more revenue"
       },
       {
         id: "2",
         title: "gov bento V2.0",
-        img: "",
+        img: require("../assets/projects/gov-bento-V2.0.png"),
         text:
           "Introduce the MakaerDAO to help DAO and DeFi derive credit, and aggregate more governance tokens to help expand governance"
       },
       {
         id: "3",
         title: "DAS",
-        img: "",
-        text: "Achieve governance incentives through flexible supply of governance tokens similar to AMPL. DAS will be a complete set of governance structure."
+        img: require("../assets/projects/das.png"),
+        text:
+          "Achieve governance incentives through flexible supply of governance tokens similar to AMPL. DAS will be a complete set of governance structure."
       },
       {
         id: "4",
         title: "NASH Protocol",
-        img: "",
+        img: require("../assets/projects/nash.png"),
         text: "Running complex games with hidden strategy on blockchain"
       }
     ]
@@ -118,7 +125,8 @@ export default {
   },
   rogtoken: {
     title: "ROG token powers the Community Governance",
-    text:"ROG is the ResetDAO native ERC20 token，ROG token holders have an economic claim to the ResetDAO´s revenue，it represents your contribution and rights in the organization, we will mine new ROG as an incentive for contributors.",
+    text:
+      "ROG is the ResetDAO native ERC20 token，ROG token holders have an economic claim to the ResetDAO´s revenue，it represents your contribution and rights in the organization, we will mine new ROG as an incentive for contributors."
   },
   fooTer: {
     title: "Join the community",

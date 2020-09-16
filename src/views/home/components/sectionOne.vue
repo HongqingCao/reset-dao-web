@@ -6,13 +6,27 @@
           <h1 class="text-white mt-4 mt-md-6 text-h1">
             {{ $t("sectionOne.title") }}
           </h1>
-          <p class="h5 text-white font-weight-bold text-p">
-            {{ $t("sectionOne.textp1") }}
+          <p
+            class="h5 text-white mb-5  font-weight-bold text-p"
+            v-show="textShow"
+          >
+            <span class="tagline-skill">
+              <span class="tagline-skill_inner">
+                {{ $t("sectionOne.textp1") }}
+              </span>
+            </span>
           </p>
-          <p class="h5 text-white mb-5  font-weight-bold text-p">
-            {{ $t("sectionOne.textp2") }}
+          <p
+            class="h5 text-white mb-5  font-weight-bold text-p"
+            v-show="!textShow"
+          >
+            <span class="tagline-skill">
+              <span class="tagline-skill_inner">
+                {{ $t("sectionOne.textp2") }}
+              </span>
+            </span>
           </p>
-          <a
+          <!--<a
             href="/"
             class="d-inline-flex flex-row align-items-center page-scroll mb-3 mb-md-0 btn-new"
           >
@@ -23,7 +37,7 @@
             class=" ml-2 d-inline-flex flex-row align-items-center btn-new"
           >
             <span class="iconfont"> &#xe65a; {{ $t("sectionOne.btn2") }}</span>
-          </a>
+          </a>-->
         </div>
       </div>
     </div>
@@ -37,6 +51,7 @@ export default {
     return {
       isActive: "gov",
       lanIsActive: "EN",
+      textShow: true,
       navList: [
         { id: "gov", title: " GOV", ref: "" },
         { id: "projects", title: "PROJECTS", ref: "" },
@@ -44,6 +59,11 @@ export default {
         { id: "Web3", title: "(Connect Web3)", ref: "" }
       ]
     };
+  },
+  created() {
+    setInterval(() => {
+      this.textShow = !this.textShow;
+    }, 4000);
   }
 };
 </script>
@@ -57,12 +77,59 @@ export default {
   .container {
     z-index: 2;
     position: relative;
+    .text-center {
+      background-color: rgba(255, 32, 59, 0.2);
+    }
     .text-h1 {
       font-size: 5rem;
       font-weight: bold;
     }
     .text-p {
       font-size: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      display: inline-block;
+      overflow: hidden;
+      .tagline-skill {
+        -webkit-animation: animatetotop 6s steps(3) infinite;
+        animation: animatetotop 6s steps(3) infinite;
+
+        .tagline-skill_inner {
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: 0;
+            bottom: -2px;
+            left: 0;
+            background-color: #fb203b;
+            border-left: 1px solid #fff;
+            -webkit-animation: animatetoright 2s steps(20) infinite alternate;
+            animation: animatetoright 2s steps(20) infinite alternate;
+          }
+        }
+      }
+    }
+
+    @keyframes animatetoright {
+      0% {
+        left: 0;
+        margin-right: auto;
+      }
+      100% {
+        left: 100%;
+        margin-left: 0.6em;
+        margin-right: 0em;
+      }
+    }
+    @keyframes animatetotop {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: 5rem;
+      }
     }
     @media (min-width: 768px) {
       .vh-md-100 {

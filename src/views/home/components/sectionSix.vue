@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionSix-warrper  bg-light">
+  <section class="sectionSix-warrper">
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto text-center">
@@ -8,7 +8,7 @@
       </div>
       <div class="row d-md-flex mt-4 text-center">
         <div class="col-md-3 mt-2 list" v-for="item in list" :key="item.id">
-          <img :src="item.img" class="list-img"/>
+          <img :src="item.img" class="list-img" />
         </div>
       </div>
     </div>
@@ -17,26 +17,26 @@
 <script>
 export default {
   name: "sectionSix",
-  data(){
+  data() {
     return {
-      list:[]
-    }
+      list: []
+    };
   },
   methods: {
     getList() {
-      const imgs = require.context('@/assets/partners', true, /\.png$/)
-      imgs.keys().forEach((key,index) => {
+      const imgs = require.context("@/assets/partners", true, /\.png$/);
+      imgs.keys().forEach((key, index) => {
         let item = {
-          id:index,
-          img: require('@/assets/partners'+ key.substr(1))
-        }
-        this.list.push(item)
-        })
-        console.log(this.list)
+          id: index,
+          img: require("@/assets/partners" + key.substr(1))
+        };
+        this.list.push(item);
+      });
+      console.log(this.list);
     }
   },
   created() {
-    this.getList()
+    this.getList();
   }
 };
 </script>
@@ -54,6 +54,9 @@ export default {
     padding-bottom: 1rem;
   }
   .list {
+    @media screen and (max-width: 768px) {
+      width: 50%;
+    }
     img {
       display: block;
       width: 100%;

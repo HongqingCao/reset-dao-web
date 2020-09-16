@@ -2,9 +2,9 @@
  * @Author: codercao
  * @Date: 2020-09-01 21:53:49
  * @LastEditors: codercao
- * @LastEditTime: 2020-09-03 22:42:13
+ * @LastEditTime: 2020-09-16 20:53:38
  * @Description: 
- * @FilePath: \vue-win10-admine:\2020\reset-dao-web\src\views\home\components\sectionThree.vue
+ * @FilePath: \vue-win10-admine:\2020\resetdao.github.io\src\views\home\components\sectionThree.vue
 -->
 <template>
   <section class="sectionThree-warrper bg-light" id="projects">
@@ -14,7 +14,7 @@
           <h2 class="text-primary text-title">
             {{ $t("sectionThree.title") }}
           </h2>
-          <p class="text-muted lead">{{$t("sectionThree.text")}} </p>
+          <p class="text-muted lead">{{ $t("sectionThree.text") }}</p>
         </div>
       </div>
       <div class="row d-md-flex mt-4 text-center">
@@ -22,12 +22,12 @@
           <div class="card card-warrper">
             <div class="card-body">
               <h2 class="card-title">{{ item.title }}</h2>
-              <img src="@/assets/nash_jpg.jpg" />
+              <img :src="item.img" />
               <p class="card-text">{{ item.text }}</p>
-              <div class="card-more">
+              <!-- <div class="card-more">
                 <a>{{ $t("sectionThree.btn1") }}</a
                 ><a>{{ $t("sectionThree.btn2") }}</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -71,16 +71,19 @@ export default {
   .card-warrper {
     background: none !important;
     border: none;
-    text-align: left;
+    text-align: center;
     .card-title {
       font-size: 1.5rem;
       color: #000;
     }
     img {
-      display: block;
-      background-color: #e31d33;
-      height: 148px;
-      width: 100%;
+      // display: block;
+      // background-color: #e31d33;
+      // height: 148px;
+      // width: 100%;
+      // background-image: url("../../../assets/nash_jpg.jpg");
+      background-size: cover;
+      background-position: center;
     }
     .card-text {
       font-size: 1rem;
